@@ -1,0 +1,187 @@
+*{
+    margin:0;
+    padding: 0%;
+}
+body{
+    background-color: rgb(28, 36, 49);
+    padding: 2%;
+}
+.container{
+    margin: 30px auto;
+    padding: 100px;
+    width:30vw;
+    animation: cont 5s linear infinite;
+    border-radius: 40px;
+}
+@keyframes cont {
+    0%{
+        border: 5px solid red;
+        box-shadow: 0 0 150px rgb(255, 0, 0),inset 0 0 100px rgb(255, 0, 0);
+    }
+    33.33%{
+        border:5px solid rgb(0, 255, 0);
+        box-shadow: 0 0 150px rgb(0, 255, 0),inset 0 0 100px rgb(0, 255, 0);
+    }
+    66.66%{
+        border: 5px solid rgb(0, 0, 255);
+        box-shadow: 0 0 150px rgb(0, 0, 255),inset 0 0 100px rgb(0, 0, 255);
+    }
+    100%{
+        border:5px solid red;
+        box-shadow: 0 0 150px rgb(255, 0, 0),inset 0 0 100px rgb(255, 0, 0);
+    }
+}
+.wave{
+    margin: 10px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    
+    background-color: rgb(0, 162, 255);
+    box-shadow:0 0 50px rgb(0, 162, 255), 0 0 100px rgb(0, 133, 210);
+}
+.wave1{
+    animation: wave 1.2s  cubic-bezier(0.48, 0.01, 0.58, 1) infinite;
+}
+.wave2{
+    animation: wave 1.21s cubic-bezier(0.48, 0.01, 0.58, 1)  infinite;
+}
+.wave3{
+    animation: wave 1.22s cubic-bezier(0.48, 0.01, 0.58, 1)  infinite;
+}
+.wave4{
+    animation: wave 1.23s cubic-bezier(0.48, 0.01, 0.58, 1)  infinite;
+}
+.wave5{
+    animation: wave 1.24s cubic-bezier(0.48, 0.01, 0.58, 1)  infinite;
+}
+.wave6{
+    animation: wave 1.25s cubic-bezier(0.48, 0.01, 0.58, 1)  infinite;
+}
+.wave7{
+    animation: wave 1.26s cubic-bezier(0.48, 0.01, 0.58, 1)  infinite;
+}
+.wave8{
+    animation: wave 1.27s cubic-bezier(0.48, 0.01, 0.58, 1)  infinite;
+}
+.wave9{
+    animation: wave 1.28s cubic-bezier(0.48, 0.01, 0.58, 1)  infinite;
+}
+.wave10{
+    animation: wave 1.29s cubic-bezier(0.48, 0.01, 0.58, 1)  infinite;
+}
+.wave11{
+    animation: wave 1.3s cubic-bezier(0.48, 0.01, 0.58, 1)  infinite;
+}
+.wave12{
+    animation: wave 1.31s cubic-bezier(0.48, 0.01, 0.58, 1)  infinite;
+}
+@keyframes wave {
+    0%{
+        margin-left: 0px;
+    }
+    50%{
+        margin-left: 95%;
+    }
+    100%{
+        margin-left: 0px;
+    }
+}
+@media screen and (max-width:840px) {
+    body{
+        padding: 4%;
+    }
+    .container{
+        width: 70vw;
+        padding: 20px;
+        border-radius: 20px;
+    }
+    .wave{
+        width: 20px;
+        height: 20px;
+        margin: 20px;
+    }
+}
+.myname{
+    font-family: monospace;
+    color: rgb(142, 255, 127);
+    font-size: 38px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    animation: rgb2 5s linear infinite;
+}
+
+.myname::before{
+    content: " ";
+    margin-top: 45px;
+    position: absolute;
+    width: 350px;
+    height: 5px;
+    border-radius: 20px;
+    animation: rgb1 5s linear infinite;
+}
+@keyframes rgb1 {
+    0%{
+        background-color: rgb(255, 0, 0);
+        box-shadow: 0 0 100px 20px rgb(255, 0, 0);
+    }
+    33.33%{
+        background-color: rgb(0, 255, 0);
+        box-shadow: 0 0 100px 20px rgb(0, 255, 0);
+    }
+    66.66%{
+        background-color: rgb(0, 0, 255);
+        box-shadow: 0 0 100px 20px rgb(0, 0, 255);
+    }
+    100%{
+        background-color: rgb(255, 0, 0);
+        box-shadow: 0 0 100px 20px rgb(255, 0, 0);
+    }
+}
+@keyframes rgb2 {
+    0%{
+        color:rgb(255, 168, 168) ;
+        text-shadow: 0 0 10px 10px rgb(255, 0, 0);
+    }
+    33.33%{
+        color:rgb(168, 255, 168) ;
+        text-shadow: 0 0 10px 10px rgb(0, 255, 0);
+    }
+    66.66%{
+        color:rgb(171, 171, 255) ;
+        text-shadow: 0 0 10px 10px rgb(0, 0, 255);
+    }
+    100%{
+        color:rgb(255, 168, 168) ;
+        text-shadow: 0 0 10px 10px rgb(255, 0, 0);
+    }
+}
+.social-link{
+    display: flex;
+    justify-content:center;
+}
+.social-link img{
+    margin-top: 6px;
+    transition: all 0.2s ;
+    width: 80px;
+}
+.social-link img:hover{
+    width: 90px;
+    opacity: 0.7;
+}
+@media (max-width:500px) {
+    .myname{
+        font-size: 30px;
+    }
+    .myname::before{
+        width: 250px;
+    }
+    .social-link img{
+        margin-top: 12px;
+        width: 55px;
+    }
+    .social-link img:hover{
+        width: 65px;
+    }
+}
